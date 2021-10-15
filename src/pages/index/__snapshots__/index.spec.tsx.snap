@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Index App 1`] = `
+<div>
+  Index
+  <button
+    onClick={[Function]}
+  >
+    getData
+  </button>
+</div>
+`;
