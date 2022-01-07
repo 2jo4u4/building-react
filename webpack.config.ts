@@ -11,11 +11,14 @@ const config: webpack.Configuration = {
   entry: './src/index.tsx',
   devServer: {
     port: 8888,
+    proxy: {},
+    historyApiFallback: { index: '/', disableDotRule: true, rewrites: [{ from: /[A-Za-z0-9\\-]/, to: 'index.html' }] },
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'js/[name].[contenthash].js',
     assetModuleFilename: 'assets/[hash][ext][query]',
+    publicPath: '/',
   },
   plugins: [
     new CleanWebpackPlugin(),
@@ -48,6 +51,10 @@ const config: webpack.Configuration = {
       {
         test: /\.(png|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
+      },
+      {
+        test: /\.svg$/i,
+        type: 'asset/inline',
       },
     ],
   },
