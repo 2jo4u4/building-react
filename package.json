@@ -14,7 +14,8 @@
       "<rootDir>/jest-setup.ts"
     ],
     "moduleNameMapper": {
-      "\\.(css|scss)$": "identity-obj-proxy"
+      "\\.(css|scss)$": "identity-obj-proxy",
+      "\\.(svg|png|jpg|jpeg|gif|webp)$": "<rootDir>/jest-transfer.js"
     },
     "testEnvironment": "jsdom"
   },
