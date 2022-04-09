@@ -9,6 +9,7 @@ import ESLintPlugin from 'eslint-webpack-plugin'
 
 const config: webpack.Configuration = {
   entry: './src/index.tsx',
+  devtool: 'inline-source-map',
   devServer: {
     port: 8888,
     proxy: {},
